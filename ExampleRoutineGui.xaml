@@ -39,7 +39,7 @@
                 <ComboBox Name="BlessingAuraSkillNameComboBox" Grid.Row="0" Grid.Column="1" Margin="3"
                           ItemsSource="{Binding AuraSkillSlots}" SelectedItem="{Binding Path=BlessingAuraSkillName}" IsEditable="False" />
 
-                <Label Grid.Row="0" Grid.Column="0" Content="Single Target Melee Skill Slot: " Margin="3,5,3,1"
+                <!-- <Label Grid.Row="0" Grid.Column="0" Content="Single Target Melee Skill Slot: " Margin="3,5,3,1"
                        ToolTipService.ToolTip="The skill slot  (1-8) to use in melee range. If set to -1, it will not be used." />
                 <ComboBox Name="SingleTargetMeleeSlotComboBox" Grid.Row="0" Grid.Column="1" Margin="3"
                           ItemsSource="{Binding AllSkillSlots}" SelectedItem="{Binding Path=SingleTargetMeleeSlot}" IsEditable="False" />
@@ -62,7 +62,7 @@
                 <Label Grid.Row="4" Grid.Column="0" Content="Fallback Skill Slot: " Margin="3,5,3,1"
                        ToolTipService.ToolTip="The skill to force use when out of mana, or the desired skill cannot be cast." />
                 <ComboBox Name="FallbackSlotComboBox" Grid.Row="4" Grid.Column="1" Margin="3" 
-                          ItemsSource="{Binding AllSkillSlots}" SelectedItem="{Binding Path=FallbackSlot}" IsEditable="False"/>
+                          ItemsSource="{Binding AllSkillSlots}" SelectedItem="{Binding Path=FallbackSlot}" IsEditable="False"/> -->
             </Grid>
         </GroupBox>
         <GroupBox Grid.Row="1" Grid.Column="0" Header="Ranges">
