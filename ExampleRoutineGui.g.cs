@@ -141,31 +141,31 @@ namespace ExampleRoutine {
         void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
             switch (connectionId)
             {
-            // case 1:
-            // this.SingleTargetMeleeSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
-            // return;
-            // case 2:
-            // this.SingleTargetRangedSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
-            // return;
-            // case 3:
-            // this.AoeMeleeSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
-            // return;
-            // case 4:
-            // this.AoeRangedSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
-            // return;
-            // case 5:
-            // this.FallbackSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
-            // return;
-            // case 6:
-            // this.CombatRangeTextBox = ((System.Windows.Controls.TextBox)(target));
-            // return;
-            // case 7:
-            // this.MaxMeleeRangeTextBox = ((System.Windows.Controls.TextBox)(target));
-            // return;
-            // case 8:
-            // this.MaxRangeRangeTextBox = ((System.Windows.Controls.TextBox)(target));
-            // return;
             case 1:
+            this.SingleTargetMeleeSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
+            return;
+            case 2:
+            this.SingleTargetRangedSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
+            return;
+            case 3:
+            this.AoeMeleeSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
+            return;
+            case 4:
+            this.AoeRangedSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
+            return;
+            case 5:
+            this.FallbackSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
+            return;
+            case 6:
+            this.CombatRangeTextBox = ((System.Windows.Controls.TextBox)(target));
+            return;
+            case 7:
+            this.MaxMeleeRangeTextBox = ((System.Windows.Controls.TextBox)(target));
+            return;
+            case 8:
+            this.MaxRangeRangeTextBox = ((System.Windows.Controls.TextBox)(target));
+            return;
+            case 9:
             this.BlessingAuraSkillNameComboBox = ((System.Windows.Controls.ComboBox)(target));
             return;
             }
