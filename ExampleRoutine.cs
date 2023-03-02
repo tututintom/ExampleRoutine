@@ -14,7 +14,7 @@ using DreamPoeBot.Loki.Game;
 using DreamPoeBot.Loki.Game.GameData;
 using DreamPoeBot.Loki.Game.Objects;
 using log4net;
-
+using FlaskHud = DreamPoeBot.Loki.Game.LokiPoe.InGameState.QuickFlaskHud;
 
 namespace ExampleRoutine
 {
@@ -45,6 +45,25 @@ namespace ExampleRoutine
 
         public async Task<LogicResult> Logic(Logic logic)
         {
+            var smite = LokiPoe.Me.HasAura("Smite");
+            var skillSmite = LokiPoe.InGameState.SkillBarHud.Skills.FirstOrDefault(s => s.Name == "Smite");
+            if (smite && skillSmite != null){
+                Log.DebugFormat($"Has Smite");
+                return LogicResult.Unprovided;
+            }
+
+            var hatred = LokiPoe.Me.HasAura("Hatred");
+            var skillhatred = LokiPoe.InGameState.SkillBarHud.Skills.FirstOrDefault(s => s.Name == "Hatred");
+            var thisflask = FlaskHud.InventoryControl.Inventory.Items.FirstOrDefault(x => x.LocationTopLeft.X == 4);
+            // Log.Info($"thisflask {thisflask}");
+            // Log.Info($"hatred {hatred}");
+
+            if(!hatred && thisflask.CanUse && skillhatred != null){
+                FlaskHud.UseFlaskInSlot(5);
+                await Coroutine.Sleep(50);
+                LokiPoe.InGameState.SkillBarHud.Use(skillhatred.Slot, false, false);
+                await Coroutine.Sleep(50);
+            } 
             // Something, usually a specific task, requested the Routine to perform this Logic with a `hook_combat` id, here we can implement new id for differents porpose.
             if (logic.Id == "hook_combat")
             {
