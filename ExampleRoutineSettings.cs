@@ -24,6 +24,7 @@ namespace ExampleRoutine
             // }
         }
 
+        private string _blessingAuraSkillName;
         private int _singleTargetMeleeSlot;
         private int _singleTargetRangedSlot;
         private int _aoeMeleeSlot;
@@ -35,6 +36,21 @@ namespace ExampleRoutine
         private bool _skipShrines;
         private int _aoePackSize;
         private bool _alwaysAttackInPlace;
+
+        [DefaultValue("Haste")] 
+        public string BlessingAuraSkillName
+        {
+            get { return _blessingAuraSkillName; }
+            set
+            {
+                if (value.Equals(_blessingAuraSkillName))
+                {
+                    return;
+                }
+                _blessingAuraSkillName = value;
+                NotifyPropertyChanged(() => BlessingAuraSkillName);
+            }
+        }
 
         /// <summary>
         /// The skill slot to use in melee range.
@@ -248,6 +264,25 @@ namespace ExampleRoutine
             11,
             12,
             13
+        });
+
+        [JsonIgnore] private static List<string> _auraSkillSlots;
+
+        /// <summary>List of all available skill slots </summary>
+        [JsonIgnore]
+        public static List<string> AuraSkillSlots => _auraSkillSlots ?? (_auraSkillSlots = new List<string>
+        {
+            "Haste",
+            "Grace",
+            "Wrath",
+            "Anger",
+            "Zealotry",
+            "Discipline",
+            "Determination",
+            "Defiance Banner",
+            "Precision",
+            "Clarity",
+            "Vitality",
         });
     }
 }

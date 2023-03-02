@@ -40,8 +40,14 @@ namespace ExampleRoutine {
     /// </summary>
     public partial class ExampleRoutineGui : System.Windows.Controls.UserControl, System.Windows.Markup.IComponentConnector {
         
-        
         #line 39 "..\..\ExampleRoutineGui.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.ComboBox BlessingAuraSkillNameComboBox;
+        
+        #line default
+        #line hidden
+        
+        #line 44 "..\..\ExampleRoutineGui.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox SingleTargetMeleeSlotComboBox;
         
@@ -49,7 +55,7 @@ namespace ExampleRoutine {
         #line hidden
         
         
-        #line 44 "..\..\ExampleRoutineGui.xaml"
+        #line 49 "..\..\ExampleRoutineGui.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox SingleTargetRangedSlotComboBox;
         
@@ -57,7 +63,7 @@ namespace ExampleRoutine {
         #line hidden
         
         
-        #line 49 "..\..\ExampleRoutineGui.xaml"
+        #line 54 "..\..\ExampleRoutineGui.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox AoeMeleeSlotComboBox;
         
@@ -65,7 +71,7 @@ namespace ExampleRoutine {
         #line hidden
         
         
-        #line 54 "..\..\ExampleRoutineGui.xaml"
+        #line 59 "..\..\ExampleRoutineGui.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox AoeRangedSlotComboBox;
         
@@ -73,7 +79,7 @@ namespace ExampleRoutine {
         #line hidden
         
         
-        #line 59 "..\..\ExampleRoutineGui.xaml"
+        #line 64 "..\..\ExampleRoutineGui.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox FallbackSlotComboBox;
         
@@ -81,7 +87,7 @@ namespace ExampleRoutine {
         #line hidden
         
         
-        #line 78 "..\..\ExampleRoutineGui.xaml"
+        #line 83 "..\..\ExampleRoutineGui.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox CombatRangeTextBox;
         
@@ -89,7 +95,7 @@ namespace ExampleRoutine {
         #line hidden
         
         
-        #line 82 "..\..\ExampleRoutineGui.xaml"
+        #line 87 "..\..\ExampleRoutineGui.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox MaxMeleeRangeTextBox;
         
@@ -97,7 +103,7 @@ namespace ExampleRoutine {
         #line hidden
         
         
-        #line 86 "..\..\ExampleRoutineGui.xaml"
+        #line 91 "..\..\ExampleRoutineGui.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox MaxRangeRangeTextBox;
         
@@ -135,27 +141,30 @@ namespace ExampleRoutine {
             switch (connectionId)
             {
             case 1:
-            this.SingleTargetMeleeSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
+            this.BlessingAuraSkillNameComboBox = ((System.Windows.Controls.ComboBox)(target));
             return;
             case 2:
-            this.SingleTargetRangedSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
+            this.SingleTargetMeleeSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
             return;
             case 3:
-            this.AoeMeleeSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
+            this.SingleTargetRangedSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
             return;
             case 4:
-            this.AoeRangedSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
+            this.AoeMeleeSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
             return;
             case 5:
-            this.FallbackSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
+            this.AoeRangedSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
             return;
             case 6:
-            this.CombatRangeTextBox = ((System.Windows.Controls.TextBox)(target));
+            this.FallbackSlotComboBox = ((System.Windows.Controls.ComboBox)(target));
             return;
             case 7:
-            this.MaxMeleeRangeTextBox = ((System.Windows.Controls.TextBox)(target));
+            this.CombatRangeTextBox = ((System.Windows.Controls.TextBox)(target));
             return;
             case 8:
+            this.MaxMeleeRangeTextBox = ((System.Windows.Controls.TextBox)(target));
+            return;
+            case 9:
             this.MaxRangeRangeTextBox = ((System.Windows.Controls.TextBox)(target));
             return;
             }
