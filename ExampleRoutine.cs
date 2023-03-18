@@ -52,8 +52,8 @@ namespace ExampleRoutine
                 return LogicResult.Unprovided;
             }
 
-            var hatred = LokiPoe.Me.HasAura("Hatred");
-            var skillhatred = LokiPoe.InGameState.SkillBarHud.Skills.FirstOrDefault(s => s.Name == "Hatred");
+            var hatred = LokiPoe.Me.HasAura(ExampleRoutineSettings.Instance.BlessingAuraSkillName);
+            var skillhatred = LokiPoe.InGameState.SkillBarHud.Skills.FirstOrDefault(s => s.Name == ExampleRoutineSettings.Instance.BlessingAuraSkillName);
             var thisflask = FlaskHud.InventoryControl.Inventory.Items.FirstOrDefault(x => x.LocationTopLeft.X == 4);
             // Log.Info($"thisflask {thisflask}");
             // Log.Info($"hatred {hatred}");
